@@ -2,13 +2,34 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobaStyle = createGlobalStyle`
     :root {
+        --red: #e52e4d;
+        --blue: #5429cc;
+
+        --blue-light: #6933ff;
+
+        --text-title: #363f5f;
+        --text-body: #969cb3;
+
         --background: #f0f2f5;
+        --shape: #ffffff;
     }
 
     * {
         margin: 0;
-        padiing: 0;
+        padding: 0;
         box-sizing: border-box;
+    }
+
+    html {
+        @media (max-width: 1080px) {
+            /* 16 * 0.9375 = 15px */
+            font-size: 93.75%;
+        }
+
+        @media (max-width: 720px) {
+            /* 16 * 0.875 = 14px */
+            font-size: 87.5%;
+        }
     }
 
     body { 
@@ -16,5 +37,12 @@ export const GlobaStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
     }
 
-    
+    button {
+        cursor: pointer;
+    }
+
+    [disabled] {
+        opacity: .6;
+        cursor: not-allowed;
+    }
 `;
