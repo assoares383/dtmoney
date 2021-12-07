@@ -24,5 +24,10 @@ export const Container = styled.div`
             font-weight: 500;
             line-height: 3rem;
         }
+
+        &.highlight-background {
+            background-color: var(--green);
+            color: var(--shape);
+        }
     }
 `;
